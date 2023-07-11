@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_app/reaction_widget.dart';
 import 'package:flutter_ui_app/type_class.dart';
 
 class ListViewHome extends StatelessWidget {
@@ -83,6 +84,27 @@ class ListViewHome extends StatelessWidget {
                                                 topLeft: Radius.circular(10),
                                                 topRight: Radius.circular(10))),
                                       ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: <Widget>[
+                                            Text(
+                                              '28 March',
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: Color.fromARGB(
+                                                      255, 159, 153, 153)),
+                                            ),
+                                            Icon(
+                                              Icons.more_horiz,
+                                              size: 20,
+                                              color: Colors.grey,
+                                            )
+                                          ],
+                                        ),
+                                      ),
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: ClipRRect(
@@ -112,6 +134,15 @@ class ListViewHome extends StatelessWidget {
                                                               FontWeight.bold))
                                                 ]),
                                           )),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: <Widget>[
+                                              EmojiPopUpMenuButton()
+                                            ]),
+                                      )
                                     ],
                                   ),
                                 ),
