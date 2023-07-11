@@ -74,6 +74,15 @@ class ListViewHome extends StatelessWidget {
                                 child: Expanded(
                                   child: Column(
                                     children: [
+                                      Container(
+                                        height: 10,
+                                        decoration: const BoxDecoration(
+                                            color: Color.fromARGB(
+                                                255, 35, 48, 227),
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(10),
+                                                topRight: Radius.circular(10))),
+                                      ),
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: ClipRRect(
@@ -88,13 +97,12 @@ class ListViewHome extends StatelessWidget {
                                       Padding(
                                           padding: const EdgeInsets.all(8),
                                           child: RichText(
-                                            text: const TextSpan(
-                                                style: TextStyle(
+                                            text: TextSpan(
+                                                style: const TextStyle(
                                                   color: Colors.black,
                                                 ),
-                                                text:
-                                                    'We have special offer exclusively for our community members. Use the code ',
-                                                children: <TextSpan>[
+                                                text: articles[index].title,
+                                                children: const <TextSpan>[
                                                   TextSpan(
                                                       text: '"SUMMERDELIGHTS"',
                                                       style: TextStyle(
