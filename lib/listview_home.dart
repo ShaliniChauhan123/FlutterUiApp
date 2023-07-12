@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_app/reaction_widget.dart';
+import 'package:flutter_ui_app/toast.dart';
 import 'package:flutter_ui_app/type_class.dart';
 
 class ListViewHome extends StatelessWidget {
@@ -34,35 +35,7 @@ class ListViewHome extends StatelessWidget {
                         padding: const EdgeInsets.all(2),
                         child: Column(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: const Color.fromARGB(255, 231, 232, 234),
-                              ),
-                              child: const Padding(
-                                padding: EdgeInsets.all(8),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(right: 8),
-                                      child: Icon(
-                                        Icons.info_outlined,
-                                        color: Colors.blue,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Text(
-                                        'Highlights will disappear after 30 days of posting',
-                                        style: TextStyle(
-                                            color: Colors.blue,
-                                            fontSize: 12.0,
-                                            fontWeight: FontWeight.normal),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
+                            index == 0 ? const Toast() : Container(),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
