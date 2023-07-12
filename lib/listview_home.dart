@@ -184,6 +184,63 @@ class ListViewHome extends StatelessWidget {
                                               ),
                                               EmojiPopUpMenuButton()
                                             ]),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Container(
+                                                  width: 30.0,
+                                                  height: 30.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xff7c94b6),
+                                                    image:
+                                                        const DecorationImage(
+                                                      image: AssetImage(
+                                                          'assets/ice.jpg'),
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                    borderRadius:
+                                                        const BorderRadius.all(
+                                                            Radius.circular(
+                                                                50.0)),
+                                                    border: Border.all(
+                                                      color: Colors.grey,
+                                                      width: 2.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Expanded(
+                                                child: TextField(
+                                                    decoration: InputDecoration(
+                                                        hintText:
+                                                            'Write your comment',
+                                                        hintStyle:
+                                                            const TextStyle(
+                                                                color: Colors
+                                                                    .grey),
+                                                        contentPadding:
+                                                            const EdgeInsets
+                                                                .all(10),
+                                                        enabledBorder: OutlineInputBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        30),
+                                                            borderSide:
+                                                                const BorderSide(
+                                                                    width: 1,
+                                                                    color: Colors
+                                                                        .grey)))),
+                                              )
+                                            ]),
                                       )
                                     ],
                                   ),
