@@ -138,8 +138,50 @@ class ListViewHome extends StatelessWidget {
                                         padding: EdgeInsets.all(8.0),
                                         child: Row(
                                             mainAxisAlignment:
-                                                MainAxisAlignment.end,
+                                                MainAxisAlignment.spaceBetween,
                                             children: <Widget>[
+                                              Row(
+                                                children: [
+                                                  Icon(
+                                                    Icons.favorite,
+                                                    color: Colors.pink,
+                                                    size: 20.0,
+                                                  ),
+                                                  Text(
+                                                    '12k',
+                                                    style: TextStyle(
+                                                        fontSize: 12,
+                                                        color: Colors.grey),
+                                                  )
+                                                ],
+                                              ),
+                                              Text('84 comments',
+                                                  style: TextStyle(
+                                                      fontSize: 12,
+                                                      color: Colors.grey))
+                                            ]),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Row(
+                                                children: [
+                                                  Icon(
+                                                    Icons.favorite_outline,
+                                                    color: Colors.grey,
+                                                    size: 24.0,
+                                                  ),
+                                                  Text(
+                                                    'Like',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.grey),
+                                                  )
+                                                ],
+                                              ),
                                               EmojiPopUpMenuButton()
                                             ]),
                                       )
