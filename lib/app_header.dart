@@ -8,27 +8,36 @@ class AppHeader extends StatelessWidget {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Row(
-          children: <Widget>[
-            Icon(Icons.menu_outlined),
-            Padding(
-              padding: EdgeInsets.all(12.0),
-              child: Image(
-                image: AssetImage('assets/glue.jpeg'),
-                width: 30,
-                height: 30,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 16, 16, 16),
-              child: Text(
-                'GLUE',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            )
-          ],
+        NewWidget(),
+      ],
+    );
+  }
+}
+
+class NewWidget extends StatelessWidget {
+  const NewWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(right: 8),
+          child: Image(
+            image: AssetImage('assets/glue.jpeg'),
+            width: 30,
+            height: 30,
+          ),
         ),
-        Icon(Icons.search)
+        Padding(
+          padding: EdgeInsets.fromLTRB(0, 16, 16, 16),
+          child: Text(
+            'GLUE',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        )
       ],
     );
   }
